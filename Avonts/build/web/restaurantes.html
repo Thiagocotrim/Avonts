@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Restaurates, pizzarias, bares - Avonts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/tea-cup.png" media="all" />
+        <link rel="stylesheet" type="text/css" href="scripts/css/estilo_principal.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="scripts/css/estilo.css" media="all" />
+        
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script type="text/javascript" src="lib/jquery/js/jquery.js"></script>
+        
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+        
+        <script type="text/javascript" src="scripts/js/popup_login.js"></script>
+        <script type="text/javascript" src="scripts/js/valida_login.js"></script>
+    </head>
+    <body>
+
+        <div class="global">
+            <header class="top">
+                <a href="index.html"><div class="position-logo">
+                        <img src="img/tea-cup.png" alt="uau">
+                    </div></a>
+
+                <div class="links-main">
+                    <div class="item-link"><a href=""><span>Sobre</span></a></div>
+                    <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+                    <div class="item-link"><a href=""><span>Cadastre-se</span></a></div>
+                    <div class="item-link"><a href=""><span id="login">Entrar</span></a></div>
+                </div>
+
+            </header>
+
+            <header class="top-logado">
+                <a href="index.html"><div class="position-logo">
+                        <img src="img/tea-cup.png" alt="uau">
+                    </div></a>
+
+                <div class="links-main">
+                    <div class="item-link"><a href=""><span>Sobre</span></a></div>
+                    <div class="item-link"><a href="restaurantes.html"><span>Restaurantes</span></a></div>
+                    <div class="item-link"><a href=""><span>Mensagens</span></a></div>
+                    <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+
+                    <div class="item-link-profile">
+                        <a><img src="img/matheusjunior66_1438393126_140.jpg" alt="perfil" /></a>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <header class="top-logado-search">
+                <a href="index.html"><div class="position-logo">
+                        <img src="img/tea-cup.png" alt="uau">
+                    </div></a>
+
+                <div class="vertical-separador"></div>
+
+                <div class="search-toolbar">
+                    <i class="material-icons">search</i>
+                    <form>
+                        <input class="search-toolbar-text" type="text" placeholder="Buscar" />
+                    </form>
+                </div>
+
+                <div class="links-main">
+                    <div class="item-link"><a href=""><span>Sobre</span></a></div>
+                    <div class="item-link"><a href="restaurantes.html"><span>Restaurantes</span></a></div>
+                    <div class="item-link"><a href=""><span>Mensagens</span></a></div>
+                    <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+
+                    <div class="item-link-profile">
+                        <a><img src="img/matheusjunior66_1438393126_140.jpg" alt="perfil" /></a>
+                    </div>
+
+                </div>
+
+            </header>
+
+            <div class="modal-login"></div>
+
+            <div class="popup-login">
+
+                <form id="form-login">
+
+                    <div class="login-connect-social">
+                        <button class="btn-facebook"><i class="fa fa-facebook-f"></i> Entrar com Facebook</button>
+                        <button class="btn-google"><img src="img/google_icon_2x-745c2280e5004d4c90e3ca4e60e3f677.png" alt="google">Entrar com Google</button>
+                    </div>
+
+                    <div class="signup-or-separator">
+                        <span class="h6 signup-or-separator--text">ou</span>
+                        <hr>
+                    </div>
+
+                    <div class="login-inputs">
+                        <label id="lb-email">Email é obrigatório.</label>
+                        <input type="text" id="input-email" placeholder="Endereço de E-mail">
+                        <label id="lb-senha">Senha é obrigatório.</label>
+                        <input type="password" id="input-senha" placeholder="Senha">
+                    </div>
+
+                    <div class="login-mais">
+                        <label>
+                            <input type="checkbox" /> Lembrar de mim
+                        </label>
+
+                        <a href="#" class="forgot-password pull-right">Esqueceu a senha?</a>
+
+                    </div>
+
+                    <div class="login-entrar">
+                        <button type="submit">Entrar</button>
+                    </div>
+
+                    <div class="signup-or-separator">
+                        <span class="h6 signup-or-separator--text"></span>
+                        <hr>
+                    </div>
+
+                    <div class="clearfix">
+                        <div class="signup-login-form__switch-copy"><span>Você ainda não tem uma conta?</span></div>
+                        <div class="signup-button"><button>Cadastre-se</button></div>
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="central"></div>
+            
+            <footer>
+                <div class="colum-footer">
+                    <div class="coluns-info"></div>
+
+                    <div class="coluns-info">
+                        <div>
+                            <select class="select-local">
+                                <option value="pt" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$pt">Português</option>
+                                <option value="ms" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ms">Bahasa Melayu</option>
+                                <option value="ca" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ca">Català</option>
+                                <option value="da" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$da">Dansk</option>
+                                <option value="de" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$de">Deutsch</option>
+                                <option value="en" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$en">English</option>
+                                <option value="es" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$es">Español</option>
+                                <option value="el" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$el">Eλληνικά</option>
+                                <option value="fr" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$fr">Français</option>
+                                <option value="it" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$it">Italiano</option>
+                                <option value="hu" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$hu">Magyar</option>
+                                <option value="nl" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$nl">Nederlands</option>
+                                <option value="no" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$no">Norsk</option>
+                                <option value="pl" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$pl">Polski</option>
+                                <option value="pt" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$pt">Português</option>
+                                <option value="fi" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$fi">Suomi</option>
+                                <option value="sv" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$sv">Svenska</option>
+                                <option value="tr" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$tr">Türkçe</option>
+                                <option value="is" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$is">Íslenska</option>
+                                <option value="cs" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$cs">Čeština</option>
+                                <option value="ru" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ru">Русский</option>
+                                <option value="th" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$th">ภาษาไทย</option>
+                                <option value="zh" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$zh">中文 (简体)</option>
+                                <option value="zh-TW" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$zh-TW">中文 (繁體)</option>
+                                <option value="ja" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ja">日本語</option>
+                                <option value="ko" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ko">한국어</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <select class="select-local">
+                                <option value="BRL" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$BRL">BRL</option>
+                                <option value="AED" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$AED">AED</option>
+                                <option value="ARS" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$ARS">ARS</option>
+                                <option value="AUD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$AUD">AUD</option>
+                                <option value="BGN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$BGN">BGN</option>
+                                <option value="BRL" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$BRL">BRL</option>
+                                <option value="CAD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CAD">CAD</option>
+                                <option value="CHF" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CHF">CHF</option>
+                                <option value="CLP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CLP">CLP</option>
+                                <option value="CNY" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CNY">CNY</option>
+                                <option value="COP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$COP">COP</option>
+                                <option value="CRC" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CRC">CRC</option>
+                                <option value="CZK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CZK">CZK</option>
+                                <option value="DKK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$DKK">DKK</option>
+                                <option value="EUR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$EUR">EUR</option>
+                                <option value="GBP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$GBP">GBP</option>
+                                <option value="HKD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$HKD">HKD</option>
+                                <option value="HRK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$HRK">HRK</option>
+                                <option value="HUF" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$HUF">HUF</option>
+                                <option value="IDR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$IDR">IDR</option>
+                                <option value="ILS" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$ILS">ILS</option>
+                                <option value="INR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$INR">INR</option>
+                                <option value="JPY" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$JPY">JPY</option>
+                                <option value="KRW" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$KRW">KRW</option>
+                                <option value="MAD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$MAD">MAD</option>
+                                <option value="MXN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$MXN">MXN</option>
+                                <option value="MYR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$MYR">MYR</option>
+                                <option value="NOK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$NOK">NOK</option>
+                                <option value="NZD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$NZD">NZD</option>
+                                <option value="PEN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$PEN">PEN</option>
+                                <option value="PHP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$PHP">PHP</option>
+                                <option value="PLN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$PLN">PLN</option>
+                                <option value="RON" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$RON">RON</option>
+                                <option value="RUB" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$RUB">RUB</option>
+                                <option value="SAR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$SAR">SAR</option>
+                                <option value="SEK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$SEK">SEK</option>
+                                <option value="SGD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$SGD">SGD</option>
+                                <option value="THB" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$THB">THB</option>
+                                <option value="TRY" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$TRY">TRY</option>
+                                <option value="TWD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$TWD">TWD</option>
+                                <option value="UAH" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$UAH">UAH</option>
+                                <option value="USD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$USD">USD</option>
+                                <option value="UYU" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$UYU">UYU</option>
+                                <option value="VND" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$VND">VND</option>
+                                <option value="ZAR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$ZAR">ZAR</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="coluns-info">
+                        <h1>Avonts</h1>
+                        <div>
+                            <ul class="list">
+                                <li><a>Sobre</a></li>
+                                <li><a>Carreira</a></li>
+                                <li><a>Imprensa</a></li>
+                                <li><a>Políticas de Uso</a></li>
+                                <li><a>Ajuda</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="coluns-info">
+
+                        <h1>Descubra</h1>
+                        <div>
+                            <ul class="list">
+                                <li><a>Confiança e Segurança</a></li>
+                                <li><a>Jantar de Negócios</a></li>
+                                <li><a>Guias</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="coluns-info">
+                        <h1>Restaurantes</h1>
+
+                        <div>
+                            <ul class="list">
+                                <li><a>Por Que Reservar</a></li>
+                                <li><a>Hospitalidade</a></li>
+                                <li><a>Reservando com Responsabilidade</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="footer-info">
+                    <div class="footer-left"></div>
+                    <div class="footer-right">
+                        <a><span>Termos e Privacidade</span></a>
+                        <a><span>Mapa do Site</span></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/?hl=pt-br"><i class="fa fa-instagram"></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

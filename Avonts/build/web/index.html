@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="avonts">
+    <head>
+        <title>Restaurates, pizzarias, bares - Avonts</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="img/tea-cup.png" media="all" />
+
+        <script src="lib/angular/angular.min.js"></script>
+        <script src="lib/angular/angular-messages.js"></script>
+        <script src="scripts/js/app.js"></script>
+        <script src="scripts/js/controllers/avontsCtrl.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="scripts/css/estilo_principal.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="scripts/css/estilo.css" media="all" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="lib/materialize/css/materialize.min.css"  media="screen,projection"/>
+
+        <script type="text/javascript" src="lib/jquery/jquery.js"></script>
+
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+
+        <script type="text/javascript" src="scripts/js/popup_login.js"></script>
+        <!--<script type="text/javascript" src="scripts/js/valida_login.js"></script>--> 
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                $(window).scroll(function () {
+                    var topScroll = Number(jQuery(window).scrollTop());
+
+                    if (topScroll >= 630) {
+                        $(".top-search").css("display", "block");
+                    } else {
+                        $(".top-search").css("display", "none");
+                    }
+                });
+
+            });
+
+        </script>
+
+    </head>
+    <body ng-controller="avontsCtrl">
+
+        <div class="container">
+            <div class="global">
+
+                <div id="top">
+
+                    <div class="row center hide-on-large-only" style="margin-top: 10px">
+                        <div class="col s4">
+                            <div class="position-logo-mobile">
+                                <img src="img/tea-cup.png" alt="uau">
+                            </div>
+                        </div>
+                        <!--<div class="col s4">
+                            <div class="item-link"><a href="#modal2" style="font-size: 12px; color: #484848"><span>Cadastre-se</span></a></div>                        </div>
+                        <div class="col s4">
+                            <div class="item-link"><a href="#modal1" style="font-size: 12px; color: #484848"><span id="login">Entrar</span></a></div>
+                        </div>
+                        <div class="col s12 spacer"></div>-->
+                    </div>
+
+                    <header class="top hide-on-med-and-down desktop-header-links">
+                        <a href="index.html" class="brand-logo">
+                            <div class="position-logo">
+                                <img src="img/tea-cup.png" alt="uau">
+                            </div>
+                        </a>
+
+                        <div class="links-main">
+                            <div class="item-link"><a href=""><span>Possui um restaurante?</span></a></div>
+                            <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+                            <div class="item-link"><a href="#modal2"><span>Cadastre-se</span></a></div>
+                            <div class="item-link"><a href="#modal1"><span id="login">Entrar</span></a></div>
+                        </div>
+
+                    </header>
+                </div>
+
+
+                <div id="top-logado">
+
+                    <header class="top-logado">
+                        <a href="index.html"><div class="position-logo">
+                                <img src="img/tea-cup.png" alt="uau">
+                            </div></a>
+
+                        <div class="links-main">
+                            <div class="item-link"><a href=""><span>Possui um restaurante?</span></a></div>
+                            <div class="item-link"><a href="restaurantes.html"><span>Restaurantes</span></a></div>
+                            <div class="item-link"><a href=""><span>Mensagens</span></a></div>
+                            <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+
+                            <div class="item-link-profile">
+                                <a><img src="img/matheusjunior66_1438393126_140.jpg" alt="perfil" /></a>
+                            </div>
+
+                        </div>
+
+                    </header>
+                </div>
+
+                <div id="top-logado-search">
+                    <header class="top-logado-search">
+                        <a href="index.html"><div class="position-logo">
+                                <img src="img/tea-cup.png" alt="uau">
+                            </div></a>
+
+                        <div class="vertical-separador"></div>
+
+                        <div class="search-toolbar">
+                            <i class="material-icons">search</i>
+                            <form>
+                                <input class="search-toolbar-text" type="text" placeholder="Buscar" />
+                            </form>
+                        </div>
+
+                        <div class="links-main">
+                            <div class="item-link"><a href=""><span>Possui um restaurante?</span></a></div>
+                            <div class="item-link"><a href="restaurantes.html"><span>Restaurantes</span></a></div>
+                            <div class="item-link"><a href=""><span>Mensagens</span></a></div>
+                            <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+
+                            <div class="item-link-profile">
+                                <a><img src="img/matheusjunior66_1438393126_140.jpg" alt="perfil" /></a>
+                            </div>
+
+                        </div>
+
+                    </header>
+                </div>
+
+                <div id="top-search">
+                    
+                    <div class="top-search hide-on-large-only" style="width: 100%">
+                        <div class="col s4">
+                            <div class="position-logo-mobile">
+                                <img src="img/tea-cup.png" alt="uau">
+                            </div>
+                        </div>
+
+                        <div class="vertical-separador"></div>
+
+                        <div class="search-toolbar">
+                            <i class="material-icons">search</i>
+                            <form>
+                                <input class="search-toolbar-text autocomplete" type="text" name="query" ng-model="search.query" placeholder="Destino, cidade, endereço, nome" />
+                            </form>
+                        </div>
+                        
+                    </div>
+                    
+                    <header class="top-search hide-on-med-and-down desktop-header-links">
+                        <a href="index.html"><div class="position-logo">
+                                <img src="img/tea-cup.png" alt="Avonts">
+                            </div></a>
+
+                        <div class="vertical-separador"></div>
+
+                        <div class="search-toolbar">
+                            <i class="material-icons">search</i>
+                            <form>
+                                <input class="search-toolbar-text autocomplete" type="text" name="query" ng-model="search.query" placeholder="Destino, cidade, endereço, nome" />
+                            </form>
+                        </div>
+
+                        <div class="links-main">
+                            <div class="item-link"><a href=""><span>Possui um restaurante?</span></a></div>
+                            <div class="item-link"><a href=""><span>Ajuda</span></a></div>
+                            <div class="item-link"><a href="#modal2"><span>Cadastre-se</span></a></div>
+                            <div class="item-link"><a href="#modal1"><span id="login">Entrar</span></a></div>
+                        </div>
+
+                    </header>
+                </div>
+
+                <div class="modal-login"></div>
+
+                <div id="modal1" class="popup-login">
+
+                    <form id="form-login" name="loginForm">
+
+                        <div class="login-connect-social">
+                            <button class="btn-facebook waves-effect waves-light" type="reset"><i class="fa fa-facebook-f"></i> Entrar com Facebook</button>
+                            <button class="btn-google waves-effect waves-light" type="reset"><img src="img/google_icon_2x-745c2280e5004d4c90e3ca4e60e3f677.png" alt="google">Entrar com Google</button>
+                        </div>
+
+                        <div class="signup-or-separator">
+                            <span class="h6 signup-or-separator--text">ou</span>
+                            <hr>
+                        </div>
+
+                        <div class="login-inputs">
+                            <label id="lb-email" ng-show="loginForm.email.$error.required && loginForm.email.$dirty">Email é obrigatório.</label>
+                            <input type="text" class="singup-email" ng-class="{'login-erro-info' : contato.selecionado}" id="input-login" name="email" ng-model="login.email" ng-required="true" placeholder="Endereço de E-mail">
+
+                            <label id="lb-senha" ng-show="loginForm.senha.$error.required && loginForm.senha.$dirty">Senha é obrigatório.</label>
+                            <input type="password" ng-class="{'login-erro-info': loginForm.senha.$error.required && loginForm.senha.$dirty}" id="input-senha" name="senha" ng-model="login.senha" ng-required="true" placeholder="Senha">
+                        </div>
+
+                        <div class="login-mais">
+                            <input type="checkbox" id="conectado"/> 
+                            <label for="conectado">Lembrar de mim</label>
+
+
+                            <a href="#" class="forgot-password pull-right">Esqueceu a senha?</a>
+
+                        </div>
+
+                        <div class="login-entrar">
+                            <button type="submit" class="waves-effect waves-light" ng-disabled="loginForm.$invalid">Entrar</button>
+                        </div>
+
+                        <div class="signup-or-separator">
+                            <span class="h6 signup-or-separator--text"></span>
+                            <hr>
+                        </div>
+
+                        <div class="clearfix">
+                            <div class="signup-login-form__switch-copy"><span>Você ainda não tem uma conta?</span></div>
+                            <div class="login-button"><button type="reset">Cadastre-se</button></div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="modal2" class="popup-singup">
+
+                    <form id="form-singup" name="singupForm">
+
+                        <div class="login-connect-social">
+                            <div class="singup-title"><h4>Primeiro, cadastre-se. Levará só um minuto.</h4></div>
+                            <div class="singup-connect-social"><span>Cadastre-se com o <a href="">Facebook</a> ou <a href="">Google</a></span></div>
+                        </div>
+
+                        <div class="signup-or-separator">
+                            <span class="h6 signup-or-separator--text">ou</span>
+                            <hr>
+                        </div>
+
+                        <div class="login-inputs">
+                            <label id="lb-nome" ng-show="singupForm.nome.$error.required && singupForm.nome.$dirty">Nome é obrigatório.</label>
+                            <input type="text" class="singup-nomes" ng-class="{'login-erro-info': contato.selecionado}" id="input-pnome" name="nome" ng-model="singup.nome" ng-required="true" placeholder="Primeiro nome">
+
+                            <label id="lb-sobrenome" ng-show="singupForm.sobrenome.$error.required && singupForm.sobrenome.$dirty">Sobrenome é obrigatório.</label>
+                            <input type="text" class="singup-nomes" ng-class="{'login-erro-info': contato.selecionado}" id="input-snome" name="sobrenome" ng-model="singup.sobrenome" ng-required="true" placeholder="Segundo nome">
+
+                            <label id="lb-email" ng-show="singupForm.email.$error.required && singupForm.email.$dirty">Email é obrigatório.</label>
+                            <input type="text" class="singup-email" ng-class="{'login-erro-info': contato.selecionado}" id="input-email" name="email" ng-model="singup.email" ng-required="true" placeholder="Endereço de E-mail">
+
+                            <label id="lb-senha" ng-show="singupForm.senha.$error.required && singupForm.senha.$dirty">Senha é obrigatório.</label>
+                            <input type="password" ng-class="{'login-erro-info': loginForm.senha.$error.required && loginForm.senha.$dirty}" id="input-password" name="senha" ng-model="singup.senha" ng-required="true" placeholder="Senha">
+                        </div>
+
+
+                        <div class="login-entrar">
+                            <button type="submit" class="waves-effect waves-light" id="btnSingup" ng-disabled="singupForm.$invalid">Criar uma conta</button>
+                        </div>
+
+                        <script>
+                                    $(document).ready(function () {
+                                        $("#btnSingup").click(function () { //quando clica-se no botao gravar
+
+                                            $.ajax({
+                                                url: 'http://localhost:8084/Avonts/UserServlet', //lugar onde a servlet está
+                                                type: 'POST',
+                                                data: {
+                                                    oper: "1",
+                                                    fName: $("#input-pnome").val(),
+                                                    sName: $("#input-snome").val(),
+                                                    email: $("#input-email").val(),
+                                                    password: $("#input-password").val()
+
+                                                },
+                                                complete: function (e, xhr, result) {
+                                                    if (e.readyState === 4 && e.status === 200) {
+                                                        try { //Converte a resposta HTTP JSON em um objeto JavaScript
+                                                            var Obj = eval("(" + e.responseText + ")"); //Combo OS
+
+                                                        } catch (err) { //
+                                                            // Mostra Aviso
+                                                            alert(Obj[0].texto);
+                                                        }
+                                                    }
+                                                },
+                                                success: function (data) {
+                                                    window.location.href = "restaurantes.html";
+                                                },
+                                                error: function (data) {
+                                                    window.location.href = "index.html";
+                                                }
+
+                                            });
+                                        });
+                                    });
+
+                        </script>
+
+                        <div class="signup-or-separator">
+                            <span class="h6 signup-or-separator--text"></span>
+                            <hr>
+                        </div>
+
+                        <div class="clearfix">
+                            <div class="signup-login-form__switch-copy"><span>Já possui uma conta?</span></div>
+                            <div class="signup-button"><button type="reset">Entrar</button></div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div id="slide">
+                    <div class="slide hide-on-med-and-down responsive-img">
+                        <div class="info">
+                            <h1>Bem-vindo a um mundo de reservas.</h1>
+                            <h5>Reserve lugares em restaurantes, bares, pizzarias - tudo ao toque de seus dedos</h5>
+                        </div>
+                    </div>
+
+                    <div class="welcome hide-on-large-only">
+                        <div class="info-welcome">
+                            <h1>Bem-vindo a um mundo de reservas.</h1>
+                            <h5>Reserve lugares em restaurantes, bares, pizzarias - tudo ao toque de seus dedos</h5>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="explorer">
+                    <div class="parameter-explorer hide-on-med-and-down">
+                        <form>
+                            <div class="parameter-onde">
+                                <label class="parameter-titulo">Onde</label>
+                                <input type="text" class="autocomplete" name="query" ng-model="search.query" placeholder="Destino, cidade, endereço, nome">
+
+                                <script>
+                                            $(document).ready(function () {
+                                                $('input.autocomplete').autocomplete({
+                                                    data: {
+                                                        "Di Palazzo, Arujá, São Paulo, BR": null,
+                                                        "Churrascaria Chaleira Preta, Arujá, São Paulo, BR": null,
+                                                        "Restaurante Costelão, Arujá, São Paulo, BR": null,
+                                                        "Restaurante O Português, Arujá, São Paulo, BR": null,
+                                                        "Container Pasta & Burguer, Arujá, São Paulo, BR": null,
+                                                        "Shokuji Sushi, Arujá, São Paulo, BR": null
+                                                    },
+                                                    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+                                                });
+                                            })
+                                </script>
+                            </div>
+
+                            <div class="parameter-quando">
+                                <label class="parameter-titulo">Quando</label>
+                                <input type="date" class="datepicker">
+                                <script>
+                                            $('.datepicker').pickadate({
+                                                monthsFull: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+                                                monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                                                weekdaysFull: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sabádo'],
+                                                weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'],
+                                                today: 'Hoje',
+                                                clear: 'Limpar',
+                                                close: 'Pronto',
+                                                labelMonthNext: 'Próximo mês',
+                                                labelMonthPrev: 'Mês anterior',
+                                                labelMonthSelect: 'Selecione um mês',
+                                                labelYearSelect: 'Selecione um ano',
+                                                selectMonths: true,
+                                                selectYears: 15
+                                            });
+                                </script>
+                            </div>
+
+                            <div class="parameter-pessoas">
+                                <label class="parameter-titulo">Mesa para</label>
+                                <input type="text" placeholder="1 pessoa">
+                            </div>
+
+                            <button class="buscar-lugares waves-effect waves-light">Buscar</button>
+                        </form>
+                    </div>
+
+                    <div class="container hide-on-large-only">
+                        <div class="parameter-explorer-mobile center-align">
+                            <input type="text" class="autocomplete" name="query" ng-model="search.query" placeholder="Destino, cidade, endereço, nome"> 
+                            <button><i class="material-icons">search</i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conteiner-expancao">
+
+                    <div class="conteiner-restaurantes">
+
+                        <h3 class="title">Restaurantes</h3>
+
+                        <div class="conteiner-itens">
+                            <div class="restaurante-item">
+                                <div class="image-item">
+                                    <img src="img/kojima.jpg" alt="restaurante" />
+                                </div>
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$396</span>
+                                        <span style="font-weight: 100; color: #484848">Mesa completa em Tóquio</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="restaurante-item">
+                                <div class="image-item">
+                                    <img src="img/DSC05347e.JPG" alt="restaurante" />
+                                </div>
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$576</span>
+                                        <span style="font-weight: 100; color: #484848">Mesa para 4 pessoas em Veneza</span>
+                                    </div>
+
+                                    <div class="recomendacao-item">
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #ccc"></i>
+
+                                        <span>109 comentários</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="restaurante-item">
+                                <div class="image-item">
+                                    <img src="img/restaurante-ecully-sao-paulo-sp.jpg" alt="restaurante" />
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$796</span>
+                                        <span style="font-weight: 100; color: #484848">Mesa para dois em Paris</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conteiner-experiencia">
+
+                        <h3 class="title">Experiências com chef's</h3>
+
+                        <div class="conteiner-itens">
+                            <div class="experiencia-item">
+                                <div class="image-experiencia-grande-item">
+                                    <img src="img/exp-7.jpg" alt="restaurante" />
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$129</span>
+                                        <span style="font-weight: 100; color: #484848">Amazonas - Brasil</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+                            </div>
+
+                            <div class="experiencia-item">
+                                <div class="image-experiencia-grande-item">
+                                    <img src="img/exp-8.jpg" alt="restaurante" />
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$573</span>
+                                        <span style="font-weight: 100; color: #484848">Tóquio - Imersão</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+                            </div>
+
+                            <div class="experiencia-item">
+                                <div class="image-experiencia-grande-item">
+                                    <img src="img/exp-3.jpg" alt="restaurante" />
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$236</span>
+                                        <span style="font-weight: 100; color: #484848">Melhor vinho em Londres</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+                            </div>
+
+                            <div class="experiencia-item">
+                                <div class="image-experiencia-grande-item">
+                                    <img src="img/exp-4.jpg" alt="restaurante" />
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$824</span>
+                                        <span style="font-weight: 100; color: #484848">Fondue de queijo em Moscow</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="conteiner-restaurantes">
+
+                        <h3 class="title">Restaurantes em Paris</h3>
+
+                        <div class="conteiner-itens">
+                            <div class="restaurante-item">
+                                <div class="image-item">
+                                    <img src="img/toujours_01.jpg" alt="restaurante" />
+                                </div>
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$196</span>
+                                        <span style="font-weight: 100; color: #484848">Mesa para um em Paris</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+
+                            </div>
+
+                            <div class="restaurante-item">
+                                <div class="image-item">
+                                    <img src="img/instalaciones.jpg" alt="restaurante" />
+                                </div>
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$1076</span>
+                                        <span style="font-weight: 100; color: #484848">Restaurante com música em Paris</span>
+                                    </div>
+
+                                    <div class="recomendacao-item">
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #008489"></i>
+                                        <i class="fa fa-star" style="color: #ccc"></i>
+
+                                        <span>109 comentários</span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="restaurante-item">
+                                <div class="image-item">
+                                    <img src="img/image-paris.jpg" alt="restaurante" />
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="descricao-item">
+                                        <span style="font-weight: 700; color: #484848">R$499</span>
+                                        <span style="font-weight: 100; color: #484848">Mesa para dois em Paris</span>
+                                    </div>
+                                </div>
+
+                                <div class="recomendacao-item">
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+                                    <i class="fa fa-star" style="color: #008489"></i>
+
+                                    <span>109 comentários</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <footer class="hide-on-med-and-down">
+                    <div class="colum-footer">
+                        <div class="coluns-info"></div>
+
+                        <div class="coluns-info">
+                            <div>
+                                <select class="select-local">
+                                    <option value="pt" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$pt">Português</option>
+                                    <option value="ms" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ms">Bahasa Melayu</option>
+                                    <option value="ca" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ca">Català</option>
+                                    <option value="da" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$da">Dansk</option>
+                                    <option value="de" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$de">Deutsch</option>
+                                    <option value="en" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$en">English</option>
+                                    <option value="es" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$es">Español</option>
+                                    <option value="el" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$el">Eλληνικά</option>
+                                    <option value="fr" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$fr">Français</option>
+                                    <option value="it" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$it">Italiano</option>
+                                    <option value="hu" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$hu">Magyar</option>
+                                    <option value="nl" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$nl">Nederlands</option>
+                                    <option value="no" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$no">Norsk</option>
+                                    <option value="pl" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$pl">Polski</option>
+                                    <option value="pt" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$pt">Português</option>
+                                    <option value="fi" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$fi">Suomi</option>
+                                    <option value="sv" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$sv">Svenska</option>
+                                    <option value="tr" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$tr">Türkçe</option>
+                                    <option value="is" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$is">Íslenska</option>
+                                    <option value="cs" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$cs">Čeština</option>
+                                    <option value="ru" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ru">Русский</option>
+                                    <option value="th" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$th">ภาษาไทย</option>
+                                    <option value="zh" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$zh">中文 (简体)</option>
+                                    <option value="zh-TW" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$zh-TW">中文 (繁體)</option>
+                                    <option value="ja" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ja">日本語</option>
+                                    <option value="ko" data-reactid=".21tat8tliww.0.0.0.0.0.0.1.1.0.1:$ko">한국어</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <select class="select-local">
+                                    <option value="BRL" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$BRL">BRL</option>
+                                    <option value="AED" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$AED">AED</option>
+                                    <option value="ARS" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$ARS">ARS</option>
+                                    <option value="AUD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$AUD">AUD</option>
+                                    <option value="BGN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$BGN">BGN</option>
+                                    <option value="BRL" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$BRL">BRL</option>
+                                    <option value="CAD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CAD">CAD</option>
+                                    <option value="CHF" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CHF">CHF</option>
+                                    <option value="CLP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CLP">CLP</option>
+                                    <option value="CNY" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CNY">CNY</option>
+                                    <option value="COP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$COP">COP</option>
+                                    <option value="CRC" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CRC">CRC</option>
+                                    <option value="CZK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$CZK">CZK</option>
+                                    <option value="DKK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$DKK">DKK</option>
+                                    <option value="EUR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$EUR">EUR</option>
+                                    <option value="GBP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$GBP">GBP</option>
+                                    <option value="HKD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$HKD">HKD</option>
+                                    <option value="HRK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$HRK">HRK</option>
+                                    <option value="HUF" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$HUF">HUF</option>
+                                    <option value="IDR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$IDR">IDR</option>
+                                    <option value="ILS" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$ILS">ILS</option>
+                                    <option value="INR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$INR">INR</option>
+                                    <option value="JPY" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$JPY">JPY</option>
+                                    <option value="KRW" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$KRW">KRW</option>
+                                    <option value="MAD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$MAD">MAD</option>
+                                    <option value="MXN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$MXN">MXN</option>
+                                    <option value="MYR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$MYR">MYR</option>
+                                    <option value="NOK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$NOK">NOK</option>
+                                    <option value="NZD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$NZD">NZD</option>
+                                    <option value="PEN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$PEN">PEN</option>
+                                    <option value="PHP" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$PHP">PHP</option>
+                                    <option value="PLN" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$PLN">PLN</option>
+                                    <option value="RON" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$RON">RON</option>
+                                    <option value="RUB" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$RUB">RUB</option>
+                                    <option value="SAR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$SAR">SAR</option>
+                                    <option value="SEK" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$SEK">SEK</option>
+                                    <option value="SGD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$SGD">SGD</option>
+                                    <option value="THB" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$THB">THB</option>
+                                    <option value="TRY" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$TRY">TRY</option>
+                                    <option value="TWD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$TWD">TWD</option>
+                                    <option value="UAH" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$UAH">UAH</option>
+                                    <option value="USD" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$USD">USD</option>
+                                    <option value="UYU" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$UYU">UYU</option>
+                                    <option value="VND" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$VND">VND</option>
+                                    <option value="ZAR" data-reactid=".21tat8tliww.0.0.0.1.0.0.0.1.1.0.1:$ZAR">ZAR</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="coluns-info">
+                            <h1>Avonts</h1>
+                            <div>
+                                <ul class="list">
+                                    <li><a>Sobre</a></li>
+                                    <li><a>Carreira</a></li>
+                                    <li><a>Imprensa</a></li>
+                                    <li><a>Políticas de Uso</a></li>
+                                    <li><a>Ajuda</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="coluns-info">
+
+                            <h1>Descubra</h1>
+                            <div>
+                                <ul class="list">
+                                    <li><a>Confiança e Segurança</a></li>
+                                    <li><a>Jantar de Negócios</a></li>
+                                    <li><a>Guias</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="coluns-info">
+                            <h1>Restaurantes</h1>
+
+                            <div>
+                                <ul class="list">
+                                    <li><a>Por Que Reservar</a></li>
+                                    <li><a>Hospitalidade</a></li>
+                                    <li><a>Reservando com Responsabilidade</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="footer-info">
+                        <div class="footer-left"></div>
+                        <div class="footer-right">
+                            <a><span>Termos e Privacidade</span></a>
+                            <a><span>Mapa do Site</span></a>
+                            <a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
+                            <a href="https://twitter.com/"><i class="fa fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/?hl=pt-br"><i class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>
